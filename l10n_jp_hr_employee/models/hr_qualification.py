@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2019 Quartile Limited
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
@@ -16,13 +15,8 @@ class HrQualification(models.Model):
         required=True,
         help='e.g. CISA',
     )
-    private_info_id = fields.Many2one(
-        'hr.private.info',
-        string='Private Info',
-    )
     employee_id = fields.Many2one(
-        related='private_info_id.employee_id',
-        store=True,
+        'hr.employee',
     )
     date_obtained = fields.Char(
         'Date Obtained',
@@ -58,4 +52,4 @@ class HrQualification(models.Model):
                     raise ValidationError(msg % _("Date Obtained"))
                 if len(rec.date_obtained) not in [7, 10]:
                     raise ValidationError(_("Please adjust the format to be "
-                                          "'YYYY/MM/DD' or 'YYYY/MM'."))
+                                            "'YYYY/MM/DD' or 'YYYY/MM'."))
