@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2019 Quartile Limited
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
@@ -31,17 +30,12 @@ class HrDependant(models.Model):
         string='Dependant Name (Furi)',
         required=True,
     )
-    private_info_id = fields.Many2one(
-        'hr.private.info',
-        string='Private Info',
-    )
     employee_id = fields.Many2one(
-        related='private_info_id.employee_id',
-        store=True,
+        'hr.employee',
     )
-    company_id=fields.Many2one(
+    company_id = fields.Many2one(
         'res.company',
-        related='private_info_id.company_id',
+        related='employee_id.company_id',
         string='Company',
         store=True,
     )
@@ -181,22 +175,11 @@ class HrDependant(models.Model):
     inactive_reason = fields.Char(
         'Inactive Reason',
     )
-    appointment_letter_doc = fields.Binary(
-        'Letter of Appointment',
-    )
-    appointment_letter_doc_filename = fields.Char(
-        string='Letter of Appointment File Name',
-    )
-    appointment_letter_url = fields.Char(
-        related='private_info_id.employee_id.company_id.appointment_letter_url',
-        default=lambda self: self._default_url(),
-        readonly=True,
-    )
 
     @api.onchange('phone')
     def _onchange_phone(self):
         if self.phone:
-            self.phone, msg = self.env['hr.private.info'].check_digits(
+            self.phone, msg = self.env['hr.employee'].check_digits(
                 self.phone)
             if not self.phone:
                 return msg
@@ -204,7 +187,7 @@ class HrDependant(models.Model):
     @api.onchange('postal_code')
     def _onchange_postal_code(self):
         if self.postal_code:
-            self.postal_code, msg = self.env['hr.private.info'].check_digits(
+            self.postal_code, msg = self.env['hr.employee'].check_digits(
                 self.postal_code)
             if not self.postal_code:
                 return msg
@@ -218,7 +201,7 @@ class HrDependant(models.Model):
     @api.onchange('pension_code')
     def _onchange_pension_code(self):
         if self.pension_code:
-            self.pension_code, msg = self.env['hr.private.info'].check_digits(
+            self.pension_code, msg = self.env['hr.employee'].check_digits(
                 self.pension_code)
             if not self.pension_code:
                 return msg
@@ -226,17 +209,16 @@ class HrDependant(models.Model):
     @api.onchange('pension_seq')
     def _onchange_pension_seq(self):
         if self.pension_seq:
-            self.pension_seq, msg = self.env['hr.private.info'].check_digits(
+            self.pension_seq, msg = self.env['hr.employee'].check_digits(
                 self.pension_seq)
             if not self.pension_seq:
                 return msg
 
-    @api.multi
     @api.depends('pension_code', 'pension_seq')
     def _compute_pension_number(self):
         for rec in self:
-            rec.pension_number = '%s' %(rec.pension_code or '') + '-' + \
-                                 '%s' %(rec.pension_seq or '')
+            rec.pension_number = '%s' % (rec.pension_code or '') + '-' + \
+                                 '%s' % (rec.pension_seq or '')
 
     @api.constrains('postal_code', 'phone', 'pension_code', 'pension_seq')
     def _validate_digit_fields(self):
@@ -275,7 +257,3 @@ class HrDependant(models.Model):
     def _onchange_furi_name(self):
         if self.furi_name:
             self.furi_name = jaconv.z2h(jaconv.hira2kata(self.furi_name))
-
-    @api.model
-    def _default_url(self):
-        return self.env.user.company_id.appointment_letter_url
