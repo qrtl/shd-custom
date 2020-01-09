@@ -795,7 +795,6 @@ class HrEmployee(models.Model):
 
     def write(self, vals):
         if 'state' in vals and vals['state'] == 'submit':
-            print('write')
             self.send_ready_notification_email()
         return super(HrEmployee, self).write(vals)
 
