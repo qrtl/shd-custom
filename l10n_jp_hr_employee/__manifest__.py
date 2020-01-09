@@ -1,4 +1,4 @@
-# Copyright 2019 Quartile Limited
+# Copyright 2019-2020 Quartile Limited
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 {
     "name": "Extension to Employees for Japan",
@@ -28,5 +28,6 @@
         'views/hr_employee_views.xml',
         'views/hr_qualification_views.xml',
         'views/hr_dependant_views.xml',
+        'views/res_users_views.xml',
     ],
 }

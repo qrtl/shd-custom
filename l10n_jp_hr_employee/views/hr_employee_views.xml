@@ -12,19 +12,6 @@
                 <button name="action_draft" type="object" states="submit,confirm" string="Set to Draft"/>
                 <field name="state" widget="statusbar" clickable="0"/>
             </xpath>
-            <xpath expr="//header" position="after">
-                <div class="alert alert-info" role="alert">
-                    ・"個人情報"タブにご自身の情報を入力して下さい<br/>
-                    ・"被扶養者情報"ブロックに扶養者を要する場合は入力して下さい<br/>
-                    <br/>
-                    ・入力後、「保存」→「申請」をクリックすると自動的にデータが送信され完了です<br/>
-                    ・申請後、変更が発生した場合(住所変更等)は左上の「ドラフトに設定」で修正をお願いします<br/>
-                    　修正後再度「保存」→「申請」クリックでデータを送信してください<br/>
-                    <br/>
-                    －青いフィールドは必須項目です<br/>
-                    －右上の「とりあえず保存」にチェックを入れると入力途中でも保存ができます<br/>
-                </div>
-            </xpath>
             <xpath expr="//field[@name='mobile_phone']" position="before">
                 <label for="family_name" string="Name"/>
                 <div>
@@ -74,6 +61,15 @@
             </xpath>
             <xpath expr="//field[@name='address_home_id']" position="attributes">
                 <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='km_home_work']" position="attributes">
+                <attribute name="attrs">{'required':[('temp_save','=',False)],'readonly':['|', ('state','!=','draft')]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='place_of_birth']" position="attributes">
+                <attribute name="attrs">{'required':[('temp_save','=',False)],'readonly':['|', ('state','!=','draft')]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='country_of_birth']" position="attributes">
+                <attribute name="attrs">{'required':[('temp_save','=',False)],'readonly':['|', ('state','!=','draft')]}</attribute>
             </xpath>
             <xpath expr="//field[@name='private_email']" position="before">
                 <label for="address_street" string="Address (Post Code / State)"/>
@@ -179,7 +175,10 @@
                             <field name="pension_code" placeholder="9999" attrs="{'required':[('temp_save','=',False)],'readonly':[('state','!=','draft')]}"/><span>-</span>
                             <field name="pension_seq" placeholder="999999" attrs="{'required':[('temp_save','=',False)],'readonly':[('state','!=','draft')]}"/>
                         </div>
-                        <field name="pension_number" class="oe_read_only"/>
+                        <label for="pension_number" class="oe_read_only"/>
+                        <div class="o_row mr16 oe_read_only">
+                            <field name="pension_number"/>
+                        </div>
                     </group>
                     <group name="employment_info" string="Employment Info">
                         <label for="emp_ins_number_1st" string="Emp. Insurance Number (?)" class="oe_edit_only"/>
@@ -188,7 +187,10 @@
                             <field name="emp_ins_number_2nd" placeholder="999999" attrs="{'required':[('temp_save','=',False)],'readonly':[('state','!=','draft')]}"/><span>-</span>
                             <field name="emp_ins_number_3rd" placeholder="9" attrs="{'required':[('temp_save','=',False)],'readonly':[('state','!=','draft')]}"/>
                         </div>
-                        <field name="emp_ins_number" class="oe_read_only"/>
+                        <label for="emp_ins_number" class="oe_read_only"/>
+                        <div class="o_row mr16 oe_read_only">
+                            <field name="emp_ins_number"/>
+                        </div>
                     </group>
                 </group>
                 <group name="dependant_information" string="Dependant Information (Social Insurance)">

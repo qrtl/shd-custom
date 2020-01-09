@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-30 10:43+0000\n"
-"PO-Revision-Date: 2019-12-30 10:43+0000\n"
+"POT-Creation-Date: 2020-01-09 08:17+0000\n"
+"PO-Revision-Date: 2020-01-09 08:17+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,11 +21,18 @@ msgid ""
 "\n"
 "Note by ${object.name}</br>\n"
 "<ul>\n"
-"    <li>個人情報： 提出済</li>\n"
+"    <li>Private Information: Submitted</li>\n"
 "</ul>\n"
 "\n"
 "        "
 msgstr ""
+"\n"
+"Note by ${object.name}</br>\n"
+"<ul>\n"
+"    <li>個人情報： 提出済</li>\n"
+"</ul>\n"
+"\n"
+"        "
 
 #. module: l10n_jp_hr_employee
 #: code:addons/l10n_jp_hr_employee/models/hr_employee.py:0
@@ -49,6 +56,7 @@ msgstr "'YYYY/MM/DD' または 'YYYY/MM'"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__furi_bank_acc_holder
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__furi_bank_acc_holder
 msgid "Account Holder Furigana"
 msgstr "口座名義(ｶﾅ)"
 
@@ -56,11 +64,13 @@ msgstr "口座名義(ｶﾅ)"
 #: code:addons/l10n_jp_hr_employee/models/hr_employee.py:0
 #: code:addons/l10n_jp_hr_employee/models/hr_employee.py:0
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__bank_acc_number
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__bank_acc_number
 #, python-format
 msgid "Account Number"
 msgstr "口座番号"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Address (Post Code / State)"
 msgstr "住所　郵便番号/都道府県"
@@ -68,6 +78,7 @@ msgstr "住所　郵便番号/都道府県"
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_dependant__furi_address
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__furi_address
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__furi_address
 msgid "Address Furigana"
 msgstr "住所(カナ)"
 
@@ -83,13 +94,15 @@ msgstr "親族への送金額（月額）"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__building
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__building
 msgid "Apartment/Building"
 msgstr "アパート/ビル"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__furi_building
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__furi_building
 msgid "Apartment/Building Furigana"
-msgstr "アパート/ビル(カナ)"
+msgstr "アパート/ビル"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_qualification__qualification_file
@@ -103,21 +116,25 @@ msgstr "添付ファイル名"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__bank_acc_type
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__bank_acc_type
 msgid "Bank Account Type"
 msgstr "預金種別"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__bank_branch
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__bank_branch
 msgid "Bank Branch"
 msgstr "支店"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Bank Info"
 msgstr "銀行情報"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__bank_name
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__bank_name
 msgid "Bank Name"
 msgstr "銀行"
 
@@ -162,6 +179,7 @@ msgid "Completed"
 msgstr "卒業/修了"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Confirm"
 msgstr "確認"
@@ -173,6 +191,7 @@ msgstr "確認済"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__country_code
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__country_code
 msgid "Country Code"
 msgstr "国コード"
 
@@ -202,6 +221,7 @@ msgstr "当座"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__address_street
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__address_street
 msgid "Current Address"
 msgstr "現在住所"
 
@@ -228,6 +248,7 @@ msgid "Dependant Category"
 msgstr "被扶養者区分"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Dependant Information (Social Insurance)"
 msgstr "被扶養者情報(社会保険)"
@@ -249,6 +270,7 @@ msgstr "税の扶養対象"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__dependant_ids
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__dependant_ids
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_dependant_tree
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_hr_dependant_form
 msgid "Dependants"
@@ -277,12 +299,12 @@ msgid "Draft"
 msgstr "ドラフト"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid ""
 "E.g. Name: CISA, Date Obtained: 2018/03/01, Valid Until: 2019/02/28, "
 "Reference: 1234567"
-msgstr "例) 名称: CISA  取得日: 2018/03/01  有効期限: 2019/02/28  "
-"参照: 1234567"
+msgstr "例) 名称: CISA  取得日: 2018/03/01  有効期限: 2019/02/28  参照: 1234567"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_dependant__dependant_categ__08_elder_sibling
@@ -291,11 +313,13 @@ msgstr "兄姉"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__emerg_contact_address
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__emerg_contact_address
 msgid "Emerg. Contact Address"
 msgstr "住所"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__emerg_contact_desc
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__emerg_contact_desc
 msgid "Emerg. Contact Description"
 msgstr "緊急連絡先氏名"
 
@@ -303,12 +327,14 @@ msgstr "緊急連絡先氏名"
 #: code:addons/l10n_jp_hr_employee/models/hr_employee.py:0
 #: code:addons/l10n_jp_hr_employee/models/hr_employee.py:0
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__emerg_contact_postal_code
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__emerg_contact_postal_code
 #, python-format
 msgid "Emerg. Contact Postal Code"
 msgstr "郵便番号"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__emerg_contact_type
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__emerg_contact_type
 msgid "Emerg. Contact Type"
 msgstr "続柄"
 
@@ -320,25 +346,30 @@ msgstr "電話"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__emp_ins_number_1st
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__emp_ins_number_1st
 msgid "Emp. Ins. Number (1st part)"
 msgstr "雇用保険番号(パート1)"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__emp_ins_number_2nd
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__emp_ins_number_2nd
 msgid "Emp. Ins. Number (2nd part)"
 msgstr "雇用保険番号(パート2)"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__emp_ins_number_3rd
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__emp_ins_number_3rd
 msgid "Emp. Ins. Number (3rd part)"
 msgstr "雇用保険番号(パート3)"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__emp_ins_number
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__emp_ins_number
 msgid "Emp. Insurance Number"
 msgstr "雇用保険番号"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Emp. Insurance Number (?)"
 msgstr "雇用保険番号 (?)"
@@ -351,11 +382,6 @@ msgid "Employee"
 msgstr "従業員"
 
 #. module: l10n_jp_hr_employee
-#: model:res.groups,name:l10n_jp_hr_employee.group_employee_private_info_manage
-msgid "Employee Private Information Manage"
-msgstr "個人情報管理"
-
-#. module: l10n_jp_hr_employee
 #: model:res.groups,name:l10n_jp_hr_employee.group_employee_private_info
 msgid "Employee Private Information Notify"
 msgstr "個人情報提出通知"
@@ -366,6 +392,7 @@ msgid "Employee Private Information Submitted"
 msgstr "個人情報提出済"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Employment Info"
 msgstr "雇用情報"
@@ -379,6 +406,7 @@ msgstr "雇用保険番号"
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__employment_type_id
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee_public__employment_type_id
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__employment_type_id
 msgid "Employment Type"
 msgstr "雇用タイプ"
 
@@ -397,18 +425,22 @@ msgstr "年間収入(今後1年間の見込)"
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__family_name
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee_public__family_name
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__family_name
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Family Name"
 msgstr "姓"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__roman_family_name
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__roman_family_name
 msgid "Family Name (Roman)"
 msgstr "姓(ローマ字)"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__furi_family_name
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee_public__furi_family_name
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__furi_family_name
 msgid "Family Name Furigana"
 msgstr "姓(ｶﾅ)"
 
@@ -429,10 +461,10 @@ msgstr "資格NO.を記入"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,help:l10n_jp_hr_employee.field_hr_employee__bank_acc_number
+#: model:ir.model.fields,help:l10n_jp_hr_employee.field_res_users__bank_acc_number
 msgid ""
 "For Japan Post Bank, please remove the '1' in the end of the account number"
-msgstr ""
-"ゆうちょの場合は最後の1を外してください"
+msgstr "ゆうちょの場合は最後の1を外してください"
 
 #. module: l10n_jp_hr_employee
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_qualification_tree
@@ -440,6 +472,7 @@ msgid "Full in when there is an Expiry Date"
 msgstr "有効期限がある場合は記入"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Full-width Character"
 msgstr "全角"
@@ -452,18 +485,22 @@ msgstr "性別"
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__given_name
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee_public__given_name
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__given_name
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Given Name"
 msgstr "名"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__roman_given_name
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__roman_given_name
 msgid "Given Name (Roman)"
 msgstr "名(ローマ字)"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__furi_given_name
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee_public__furi_given_name
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__furi_given_name
 msgid "Given Name Furigana"
 msgstr "名(ｶﾅ)"
 
@@ -577,6 +614,7 @@ msgid "Living Together"
 msgstr "同居"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Lowercase letters"
 msgstr "半角小文字"
@@ -599,12 +637,14 @@ msgstr "母"
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employment_type__name
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_qualification__name
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Name"
 msgstr "名称"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_dependant__name_furigana
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Name Furigana"
 msgstr "名前(カナ)"
@@ -616,11 +656,13 @@ msgstr "一般"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__note
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__note
 msgid "Note"
 msgstr "ノート"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__school_completion_desc
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__school_completion_desc
 msgid "Note (School Completion)"
 msgstr "メモ(卒業/修了)"
 
@@ -678,6 +720,7 @@ msgid "Part Time Worker"
 msgstr "パート"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Pension Info"
 msgstr "年金情報"
@@ -687,11 +730,13 @@ msgstr "年金情報"
 #: code:addons/l10n_jp_hr_employee/models/hr_employee.py:0
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_dependant__pension_number
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__pension_number
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__pension_number
 #, python-format
 msgid "Pension Number"
 msgstr "基礎年金番号"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_hr_dependant_form
 msgid "Pension Number (?)"
@@ -700,12 +745,14 @@ msgstr "基礎年金番号 (?)"
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_dependant__pension_code
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__pension_code
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__pension_code
 msgid "Pension Number Code"
 msgstr "基礎年金番号(コード)"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_dependant__pension_seq
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__pension_seq
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__pension_seq
 msgid "Pension Number Sequence"
 msgstr "基礎年金番号(連番)"
 
@@ -730,11 +777,13 @@ msgstr "フォーマットは 'YYYY/MM/DD' または 'YYYY/MM' としてくだ�
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,help:l10n_jp_hr_employee.field_hr_dependant__pension_code
 #: model:ir.model.fields,help:l10n_jp_hr_employee.field_hr_employee__pension_code
+#: model:ir.model.fields,help:l10n_jp_hr_employee.field_res_users__pension_code
 msgid "Please input '0000-000000' in case you are not sure about the number."
 msgstr "番号が不明の場合は '0000-000000' と入力してください。"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,help:l10n_jp_hr_employee.field_hr_employee__emp_ins_number_1st
+#: model:ir.model.fields,help:l10n_jp_hr_employee.field_res_users__emp_ins_number_1st
 msgid ""
 "Please input '0000-000000-0' in case you are not sure about the number."
 msgstr "番号が不明の場合は '0000-000000-0' と入力してください。"
@@ -753,23 +802,27 @@ msgstr "仕送額が確認できる通帳コピー等をご用意ください"
 #: code:addons/l10n_jp_hr_employee/models/hr_employee.py:0
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_dependant__postal_code
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__postal_code
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__postal_code
 #, python-format
 msgid "Postal Code"
 msgstr "郵便番号"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__address_pref
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__address_pref
 msgid "Prefecture"
 msgstr "都道府県"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__private_email
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__private_email
 msgid "Private Email"
 msgstr "個人Eメール"
 
 #. module: l10n_jp_hr_employee
 #: code:addons/l10n_jp_hr_employee/models/hr_employee.py:0
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__private_phone
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__private_phone
 #, python-format
 msgid "Private Phone"
 msgstr "個人電話"
@@ -790,16 +843,13 @@ msgid "Proof of Amount Sent to Family File Name"
 msgstr "仕送額確認ファイル名"
 
 #. module: l10n_jp_hr_employee
-#: model:ir.model,name:l10n_jp_hr_employee.model_hr_employee_public
-msgid "Public Employee"
-msgstr ""
-
-#. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__qualification_ids
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__qualification_ids
 msgid "Qualification"
 msgstr "資格"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_hr_qualification_form
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_qualification_tree
@@ -812,6 +862,13 @@ msgid "Reference"
 msgstr "参照"
 
 #. module: l10n_jp_hr_employee
+#: model:ir.model.fields,help:l10n_jp_hr_employee.field_hr_dependant__user_id
+#: model:ir.model.fields,help:l10n_jp_hr_employee.field_hr_qualification__user_id
+msgid "Related user name for the resource to manage its access."
+msgstr "そのアクセスを管理するためのリソースに関連するユーザ名"
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_hr_dependant_form
 msgid "Remove hyphen"
@@ -819,11 +876,13 @@ msgstr "ハイフン除く"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__residence_card
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__residence_card
 msgid "Residence Card"
 msgstr "在留カード"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__residence_card_filename
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__residence_card_filename
 msgid "Residence Card File Name"
 msgstr "在留カードファイル名"
 
@@ -834,11 +893,13 @@ msgstr "住所区分"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__residence_cert_filename
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__residence_cert_filename
 msgid "Residence Cert File Name"
 msgstr "住民票ファイル名"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__residence_cert
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__residence_cert
 msgid "Residence Certificate"
 msgstr "住民票"
 
@@ -848,18 +909,21 @@ msgid "Residential Address"
 msgstr "住所"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Roman Spelling"
 msgstr "名前ローマ字　姓/名"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__bank_acc_type__savings
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Savings"
 msgstr "普通"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__school_completion
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__school_completion
 msgid "School Completion"
 msgstr "卒業/修了状況"
 
@@ -874,6 +938,7 @@ msgid "Search Qualifications"
 msgstr "個人情報検索"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Set to Draft"
 msgstr "ドラフトに設定"
@@ -901,6 +966,7 @@ msgstr "入社"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__state
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__state
 msgid "Status"
 msgstr "ステータス"
 
@@ -910,16 +976,19 @@ msgid "Step Parent"
 msgstr "義父母"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Street"
 msgstr "市区町名番地"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Street (Furi)"
 msgstr "市区町名番地フリガナ"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Submit"
 msgstr "申請"
@@ -931,15 +1000,18 @@ msgstr "提出済"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__temp_save
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__temp_save
 msgid "Temporary Save"
 msgstr "とりあえず保存"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,help:l10n_jp_hr_employee.field_hr_employee__country_code
+#: model:ir.model.fields,help:l10n_jp_hr_employee.field_res_users__country_code
 msgid ""
 "The ISO country code in two chars. \n"
 "You can use this field for quick search."
-msgstr "ISOの国別コードは2文字です。\n"
+msgstr ""
+"ISOの国別コードは2文字です。\n"
 "これを使ってクイックサーチできます。"
 
 #. module: l10n_jp_hr_employee
@@ -975,6 +1047,7 @@ msgid "The third section of Employment Insurance Number"
 msgstr "雇用保険番号の3つ目のセクション"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Tokyo"
 msgstr "東京都"
@@ -988,6 +1061,11 @@ msgstr "無職"
 #: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__school_completion__unfinished
 msgid "Unfinished"
 msgstr "中退"
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model,name:l10n_jp_hr_employee.model_res_users
+msgid "Users"
+msgstr "ユーザ"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_qualification__date_expiry
@@ -1021,6 +1099,7 @@ msgstr "年生"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__year_left_school
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__year_left_school
 msgid "Year of Leaving School"
 msgstr "最終所属年"
 
