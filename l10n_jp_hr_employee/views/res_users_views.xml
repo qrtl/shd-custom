@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="view_employee_form" model="ir.ui.view">
-        <field name="name">hr.employee.form</field>
-        <field name="model">hr.employee</field>
-        <field name="inherit_id" ref="hr.view_employee_form"/>
+    <record id="res_users_view_form_profile" model="ir.ui.view">
+        <field name="name">res.users.preferences.form.inherit</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="hr.res_users_view_form_profile"/>
         <field name="arch" type="xml">
             <xpath expr="//header" position="inside">
                 <button name="action_submit" type="object" attrs="{'invisible': ['|',('state','!=','draft'),('temp_save','!=',False)]}" string="Submit" class="oe_highlight"/>
                 <button name="action_confirm" type="object" states="submit" string="Confirm" class="oe_highlight" groups="hr.group_hr_manager"/>
                 <button name="action_draft" type="object" states="submit,confirm" string="Set to Draft"/>
                 <field name="state" widget="statusbar" clickable="0"/>
+            </xpath>
+            <xpath expr="//page[@name='personal_information']/group" position="before">
+                <div class="alert alert-info" role="alert">
+                    ・ご自身の情報を入力して下さい<br/>
+                    ・"被扶養者情報"ブロックに扶養者を要する場合は入力して下さい<br/>
+                    <br/>
+                    ・入力後、「保存」→「申請」をクリックすると自動的にデータが送信され完了です<br/>
+                    ・申請後、変更が発生した場合(住所変更等)は左上の「ドラフトに設定」で修正をお願いします<br/>
+                    　修正後再度「保存」→「申請」クリックでデータを送信してください<br/>
+                    <br/>
+                    －青いフィールドは必須項目です<br/>
+                    －「とりあえず保存」にチェックを入れると入力途中でも保存ができます<br/>
+                </div>
             </xpath>
             <xpath expr="//field[@name='mobile_phone']" position="before">
                 <label for="family_name" string="Name"/>
@@ -34,13 +47,13 @@
             <xpath expr="//page[@name='personal_information']/group/group[3]" position="attributes">
                 <attribute name="invisible">1</attribute>
             </xpath>
-            <xpath expr="//page[@name='personal_information']/group/group[4]" position="attributes">
+            <xpath expr="//page[@name='personal_information']/group/group[5]" position="attributes">
                 <attribute name="invisible">1</attribute>
             </xpath>
-            <xpath expr="//field[@name='country_id']" position="attributes">
+            <xpath expr="//field[@name='employee_country_id']" position="attributes">
                 <attribute name="attrs">{'required':[('temp_save','=',False)],'readonly':[('state','!=','draft')]}</attribute>
             </xpath>
-            <xpath expr="//field[@name='country_id']" position="before">
+            <xpath expr="//field[@name='employee_country_id']" position="before">
                 <label for="roman_family_name" string="Roman Spelling"/>
                 <div>
                     <div class="o_row mr16">
@@ -56,7 +69,7 @@
             <xpath expr="//field[@name='gender']" position="attributes">
                 <attribute name="attrs">{'required':[('temp_save','=',False)],'readonly':[('state','!=','draft')]}</attribute>
             </xpath>
-            <xpath expr="//field[@name='phone']" position="attributes">
+            <xpath expr="//field[@name='employee_phone']" position="attributes">
                 <attribute name="invisible">1</attribute>
             </xpath>
             <xpath expr="//field[@name='address_home_id']" position="attributes">
