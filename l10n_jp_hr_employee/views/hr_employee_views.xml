@@ -62,6 +62,15 @@
             <xpath expr="//field[@name='address_home_id']" position="attributes">
                 <attribute name="invisible">1</attribute>
             </xpath>
+            <xpath expr="//field[@name='km_home_work']" position="attributes">
+                <attribute name="attrs">{'required':[('temp_save','=',False)],'readonly':['|', ('state','!=','draft')]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='place_of_birth']" position="attributes">
+                <attribute name="attrs">{'required':[('temp_save','=',False)],'readonly':['|', ('state','!=','draft')]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='country_of_birth']" position="attributes">
+                <attribute name="attrs">{'required':[('temp_save','=',False)],'readonly':['|', ('state','!=','draft')]}</attribute>
+            </xpath>
             <xpath expr="//field[@name='private_email']" position="before">
                 <label for="address_street" string="Address (Post Code / State)"/>
                 <div class="o_address_format">
@@ -166,7 +175,10 @@
                             <field name="pension_code" placeholder="9999" attrs="{'required':[('temp_save','=',False)],'readonly':[('state','!=','draft')]}"/><span>-</span>
                             <field name="pension_seq" placeholder="999999" attrs="{'required':[('temp_save','=',False)],'readonly':[('state','!=','draft')]}"/>
                         </div>
-                        <field name="pension_number" class="oe_read_only"/>
+                        <label for="pension_number" class="oe_read_only"/>
+                        <div class="o_row mr16 oe_read_only">
+                            <field name="pension_number"/>
+                        </div>
                     </group>
                     <group name="employment_info" string="Employment Info">
                         <label for="emp_ins_number_1st" string="Emp. Insurance Number (?)" class="oe_edit_only"/>
@@ -175,7 +187,10 @@
                             <field name="emp_ins_number_2nd" placeholder="999999" attrs="{'required':[('temp_save','=',False)],'readonly':[('state','!=','draft')]}"/><span>-</span>
                             <field name="emp_ins_number_3rd" placeholder="9" attrs="{'required':[('temp_save','=',False)],'readonly':[('state','!=','draft')]}"/>
                         </div>
-                        <field name="emp_ins_number" class="oe_read_only"/>
+                        <label for="emp_ins_number" class="oe_read_only"/>
+                        <div class="o_row mr16 oe_read_only">
+                            <field name="emp_ins_number"/>
+                        </div>
                     </group>
                 </group>
                 <group name="dependant_information" string="Dependant Information (Social Insurance)">

@@ -33,6 +33,9 @@ class HrDependant(models.Model):
     employee_id = fields.Many2one(
         'hr.employee',
     )
+    user_id = fields.Many2one(
+        related='employee_id.user_id',
+    )
     company_id = fields.Many2one(
         'res.company',
         related='employee_id.company_id',

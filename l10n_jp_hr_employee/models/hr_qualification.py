@@ -18,6 +18,9 @@ class HrQualification(models.Model):
     employee_id = fields.Many2one(
         'hr.employee',
     )
+    user_id = fields.Many2one(
+        related='employee_id.user_id',
+    )
     date_obtained = fields.Char(
         'Date Obtained',
         required=True,

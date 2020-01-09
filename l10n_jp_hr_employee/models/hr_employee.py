@@ -437,6 +437,15 @@ class ResUsers(models.Model):
         related='employee_id.state',
         readonly=False,
     )
+    is_hr_manager = fields.Boolean(
+        'Is HR Administrator',
+        compute='_is_hr_manager',
+    )
+
+    def _is_hr_manager(self):
+        for user in self:
+            user.is_hr_manager = True if self.env.user.user_has_groups(
+                'hr.group_hr_manager') else False
 
     def __init__(self, pool, cr):
         """ Override of __init__ to add access rights.
@@ -487,7 +496,8 @@ class ResUsers(models.Model):
             'note',
             'residence_card',
             'residence_card_filename',
-            'state'
+            'state',
+            'is_hr_manager'
         ]
         init_res = super(ResUsers, self).__init__(pool, cr)
         # duplicate list to avoid modifying the original reference
