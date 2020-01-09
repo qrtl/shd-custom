@@ -264,182 +264,227 @@ class ResUsers(models.Model):
     temp_save = fields.Boolean(
         related='employee_id.temp_save',
         readonly=False,
+        related_sudo=False,
     )
     family_name = fields.Char(
         related='employee_id.family_name',
         readonly=False,
+        related_sudo=False,
     )
     given_name = fields.Char(
         related='employee_id.given_name',
         readonly=False,
+        related_sudo=False,
     )
     furi_family_name = fields.Char(
         related='employee_id.furi_family_name',
         readonly=False,
+        related_sudo=False,
     )
     furi_given_name = fields.Char(
         related='employee_id.furi_given_name',
         readonly=False,
+        related_sudo=False,
     )
     employment_type_id = fields.Many2one(
         related='employee_id.employment_type_id',
         readonly=False,
+        related_sudo=False,
     )
     country_code = fields.Char(
         related='employee_id.country_code',
         readonly=False,
+        related_sudo=False,
     )
     roman_family_name = fields.Char(
         related='employee_id.roman_family_name',
         readonly=False,
+        related_sudo=False,
     )
     roman_given_name = fields.Char(
         related='employee_id.roman_given_name',
         readonly=False,
+        related_sudo=False,
     )
     private_phone = fields.Char(
         related='employee_id.private_phone',
         readonly=False,
+        related_sudo=False,
     )
     private_email = fields.Char(
         related='employee_id.private_email',
         readonly=False,
+        related_sudo=False,
     )
     postal_code = fields.Char(
         related='employee_id.postal_code',
         readonly=False,
+        related_sudo=False,
     )
     address_pref = fields.Char(
         related='employee_id.address_pref',
         readonly=False,
+        related_sudo=False,
     )
     address_street = fields.Char(
         related='employee_id.address_street',
         readonly=False,
+        related_sudo=False,
     )
     building = fields.Char(
         related='employee_id.building',
         readonly=False,
+        related_sudo=False,
     )
     furi_address = fields.Char(
         related='employee_id.furi_address',
         readonly=False,
+        related_sudo=False,
     )
     furi_building = fields.Char(
         related='employee_id.furi_building',
         readonly=False,
+        related_sudo=False,
     )
     residence_cert = fields.Binary(
         related='employee_id.residence_cert',
         readonly=False,
+        related_sudo=False,
     )
     residence_cert_filename = fields.Char(
         related='employee_id.residence_cert_filename',
         readonly=False,
+        related_sudo=False,
     )
     emerg_contact_type = fields.Selection(
         related='employee_id.emerg_contact_type',
         readonly=False,
+        related_sudo=False,
     )
     emerg_contact_desc = fields.Char(
         related='employee_id.emerg_contact_desc',
         readonly=False,
+        related_sudo=False,
     )
     emerg_contact_postal_code = fields.Char(
         related='employee_id.emerg_contact_postal_code',
         readonly=False,
+        related_sudo=False,
     )
     emerg_contact_address = fields.Char(
         related='employee_id.emerg_contact_address',
         readonly=False,
+        related_sudo=False,
     )
     bank_name = fields.Char(
         related='employee_id.bank_name',
         readonly=False,
+        related_sudo=False,
     )
     bank_branch = fields.Char(
         related='employee_id.bank_branch',
         readonly=False,
+        related_sudo=False,
     )
     bank_acc_type = fields.Selection(
         related='employee_id.bank_acc_type',
         readonly=False,
+        related_sudo=False,
     )
     bank_acc_number = fields.Char(
         related='employee_id.bank_acc_number',
         readonly=False,
+        related_sudo=False,
     )
     furi_bank_acc_holder = fields.Char(
         related='employee_id.furi_bank_acc_holder',
         readonly=False,
+        related_sudo=False,
     )
     school_completion = fields.Selection(
         related='employee_id.school_completion',
         readonly=False,
+        related_sudo=False,
     )
     school_completion_desc = fields.Char(
         related='employee_id.school_completion_desc',
         readonly=False,
+        related_sudo=False,
     )
     year_left_school = fields.Selection(
         related='employee_id.year_left_school',
         readonly=False,
+        related_sudo=False,
     )
     qualification_ids = fields.One2many(
         related='employee_id.qualification_ids',
         readonly=False,
+        related_sudo=False,
     )
     dependant_ids = fields.One2many(
         related='employee_id.dependant_ids',
         readonly=False,
+        related_sudo=False,
     )
     pension_code = fields.Char(
         related='employee_id.pension_code',
         readonly=False,
+        related_sudo=False,
     )
     pension_seq = fields.Char(
         related='employee_id.pension_seq',
         readonly=False,
+        related_sudo=False,
     )
     pension_number = fields.Char(
         related='employee_id.pension_number',
         readonly=False,
+        related_sudo=False,
     )
     emp_ins_number_1st = fields.Char(
         related='employee_id.emp_ins_number_1st',
         readonly=False,
+        related_sudo=False,
     )
     emp_ins_number_2nd = fields.Char(
         related='employee_id.emp_ins_number_2nd',
         readonly=False,
+        related_sudo=False,
     )
     emp_ins_number_3rd = fields.Char(
         related='employee_id.emp_ins_number_3rd',
         readonly=False,
+        related_sudo=False,
     )
     emp_ins_number = fields.Char(
         related='employee_id.emp_ins_number',
         readonly=False,
+        related_sudo=False,
     )
     note = fields.Text(
         related='employee_id.note',
         readonly=False,
+        related_sudo=False,
     )
     residence_card = fields.Binary(
         related='employee_id.residence_card',
         readonly=False,
+        related_sudo=False,
     )
     residence_card_filename = fields.Char(
         related='employee_id.residence_card_filename',
         readonly=False,
+        related_sudo=False,
     )
     state = fields.Selection(
         related='employee_id.state',
         readonly=False,
+        related_sudo=False,
     )
     is_hr_manager = fields.Boolean(
         'Is HR Administrator',
         compute='_is_hr_manager',
+        related_sudo=False,
     )
 
     def _is_hr_manager(self):
@@ -529,64 +574,83 @@ class HrEmployee(models.Model):
     temp_save = fields.Boolean(
         'Temporary Save',
         default=True,
+        groups="hr.group_hr_user",
     )
     family_name = fields.Char(
         'Family Name',
+        groups="hr.group_hr_user",
     )
     given_name = fields.Char(
         'Given Name',
+        groups="hr.group_hr_user",
     )
     furi_family_name = fields.Char(
         'Family Name Furigana',
+        groups="hr.group_hr_user",
     )
     furi_given_name = fields.Char(
         'Given Name Furigana',
+        groups="hr.group_hr_user",
     )
     employment_type_id = fields.Many2one(
         'hr.employment.type',
         string='Employment Type',
+        groups="hr.group_hr_user",
     )
     country_code = fields.Char(
         related='country_id.code',
+        groups="hr.group_hr_user",
     )
     roman_family_name = fields.Char(
         'Family Name (Roman)',
+        groups="hr.group_hr_user",
     )
     roman_given_name = fields.Char(
         'Given Name (Roman)',
+        groups="hr.group_hr_user",
     )
     private_phone = fields.Char(
         'Private Phone',
+        groups="hr.group_hr_user",
     )
     private_email = fields.Char(
         'Private Email',
         related=False,
+        groups="hr.group_hr_user",
     )
     postal_code = fields.Char(
         'Postal Code',
+        groups="hr.group_hr_user",
     )
     address_pref = fields.Char(
         'Prefecture',
         placeholder="Prefecture",
+        groups="hr.group_hr_user",
     )
     address_street = fields.Char(
         'Current Address',
+        groups="hr.group_hr_user",
     )
     building = fields.Char(
         'Apartment/Building',
+        groups="hr.group_hr_user",
     )
     furi_address = fields.Char(
         'Address Furigana',
+        groups="hr.group_hr_user",
     )
     furi_building = fields.Char(
         'Apartment/Building Furigana',
+        groups="hr.group_hr_user",
     )
     # we will not use ir.attachment to store PDF for security reason
     residence_cert = fields.Binary(
         string='Residence Certificate',
+        groups="hr.group_hr_user",
     )
     residence_cert_filename = fields.Char(
         string='Residence Cert File Name',
+        groups="hr.group_hr_user",
     )
     emerg_contact_type = fields.Selection(
         [('spouse', 'Spouse'),
@@ -597,94 +661,119 @@ class HrEmployee(models.Model):
          ('grand_mother', 'Grand Mother'),
          ('other', 'Other')],
         'Emerg. Contact Type',
+        groups="hr.group_hr_user",
     )
     emerg_contact_desc = fields.Char(
         'Emerg. Contact Description',
+        groups="hr.group_hr_user",
     )
     emerg_contact_postal_code = fields.Char(
         'Emerg. Contact Postal Code',
+        groups="hr.group_hr_user",
     )
     emerg_contact_address = fields.Char(
         'Emerg. Contact Address',
+        groups="hr.group_hr_user",
     )
     bank_name = fields.Char(
         'Bank Name',
+        groups="hr.group_hr_user",
     )
     bank_branch = fields.Char(
         'Bank Branch',
+        groups="hr.group_hr_user",
     )
     bank_acc_type = fields.Selection(
         [('savings', 'Savings'),
          ('current', 'Current')],
         'Bank Account Type',
         default='savings',
+        groups="hr.group_hr_user",
     )
     bank_acc_number = fields.Char(
         'Account Number',
         help='For Japan Post Bank, please remove the \'1\' in the end '
              'of the account number',
+        groups="hr.group_hr_user",
     )
     furi_bank_acc_holder = fields.Char(
         'Account Holder Furigana',
+        groups="hr.group_hr_user",
     )
     school_completion = fields.Selection(
         [('completed', 'Completed'),
          ('unfinished', 'Unfinished'),
          ('other', 'Other')],
         'School Completion',
+        groups="hr.group_hr_user",
     )
     school_completion_desc = fields.Char(
         'Note (School Completion)',
+        groups="hr.group_hr_user",
     )
     year_left_school = fields.Selection(
         get_years(),
         'Year of Leaving School',
+        groups="hr.group_hr_user",
     )
     qualification_ids = fields.One2many(
         'hr.qualification',
         'employee_id',
         string='Qualification',
+        groups="hr.group_hr_user",
     )
     dependant_ids = fields.One2many(
         'hr.dependant',
         'employee_id',
         string='Dependants',
+        groups="hr.group_hr_user",
     )
     pension_code = fields.Char(
         'Pension Number Code',
         help="Please input '0000-000000' in case you are not sure about the "
              "number.",
+        groups="hr.group_hr_user",
     )
     pension_seq = fields.Char(
         'Pension Number Sequence',
+        groups="hr.group_hr_user",
     )
     pension_number = fields.Char(
         'Pension Number',
         compute='_compute_pension_number',
         store=True,
+        groups="hr.group_hr_user",
     )
     emp_ins_number_1st = fields.Char(
         'Emp. Ins. Number (1st part)',
         help="Please input '0000-000000-0' in case you are not sure about the "
              "number.",
+        groups="hr.group_hr_user",
     )
     emp_ins_number_2nd = fields.Char(
         'Emp. Ins. Number (2nd part)',
+        groups="hr.group_hr_user",
     )
     emp_ins_number_3rd = fields.Char(
         'Emp. Ins. Number (3rd part)',
+        groups="hr.group_hr_user",
     )
     emp_ins_number = fields.Char(
         'Emp. Insurance Number',
         compute='_compute_emp_ins_number',
         store=True,
+        groups="hr.group_hr_user",
     )
-    note = fields.Text()
+    note = fields.Text(
+        groups="hr.group_hr_user",
+    )
     residence_card = fields.Binary(
         'Residence Card',
+        groups="hr.group_hr_user",
     )
     residence_card_filename = fields.Char(
         'Residence Card File Name',
+        groups="hr.group_hr_user",
     )
     state = fields.Selection([
         ('draft', 'Draft'),
@@ -692,7 +781,8 @@ class HrEmployee(models.Model):
         ('confirm', 'Confirmed')],
         string='Status',
         track_visibility='onchange',
-        default='draft'
+        default='draft',
+        groups="hr.group_hr_user",
     )
 
     @api.depends('pension_code', 'pension_seq')
