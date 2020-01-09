@@ -14,7 +14,7 @@
                 <field name="state" widget="statusbar" clickable="0"/>
             </xpath>
             <xpath expr="//page[@name='personal_information']/group" position="before">
-                <div class="alert alert-info" role="alert">
+                <div class="alert alert-info" role="alert" attrs="{'invisible': [('can_edit', '=', False)]}">
                     ・ご自身の情報を入力して下さい<br/>
                     ・"被扶養者情報"ブロックに扶養者を要する場合は入力して下さい<br/>
                     <br/>
@@ -222,8 +222,8 @@
                 </group>
             </xpath>
             <xpath expr="//page[@name='personal_information']/group" position="before">
-                <group name="temp_save">
-                    <field name="temp_save" attrs="{'readonly':['|', ('state','!=','draft'), ('can_edit','=',False)]}"/>
+                <group name="temp_save" attrs="{'invisible': [('can_edit', '=', False)]}">
+                    <field name="temp_save" attrs="{'readonly':[('state','!=','draft')]}"/>
                 </group>
             </xpath>
         </field>
