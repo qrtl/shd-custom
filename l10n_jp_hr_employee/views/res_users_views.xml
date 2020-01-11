@@ -8,15 +8,14 @@
         <field name="arch" type="xml">
             <xpath expr="//page[@name='personal_information']/group" position="before">
                 <div class="alert alert-info" role="alert" attrs="{'invisible':[('can_edit','=',False)]}">
-                    ・ご自身の情報を入力して下さい<br/>
-                    ・"被扶養者情報"ブロックに扶養者を要する場合は入力して下さい<br/>
+                    ・ご自身の情報を入力してください。<br/>
+                    ・"被扶養者情報"ブロックに扶養者を要する場合は入力してください。<br/>
                     <br/>
-                    ・入力後、「保存」→「申請」をクリックすると自動的にデータが送信され完了です<br/>
-                    ・申請後、変更が発生した場合(住所変更等)は左上の「ドラフトに設定」で修正をお願いします<br/>
-                    　修正後再度「保存」→「申請」クリックでデータを送信してください<br/>
+                    ・入力後、「保存」→「申請」で担当者に通知が届きます。<br/>
+                    ・申請後、変更が発生した場合(住所変更等)は左上の「ドラフトに設定」をクリックすると修正可能になります。<br/>
+                    　修正後再度「保存」→「申請」をクリックしてください。<br/>
                     <br/>
-                    －青いフィールドは必須項目です<br/>
-                    －「とりあえず保存」にチェックを入れると入力途中でも保存ができます<br/>
+                    －入力必須項目が多数ありますが、「とりあえず保存」を選択すると入力途中でも保存ができます。<br/>
                 </div>
                 <header attrs="{'invisible':[('can_edit','=',False)]}">
                     <button name="action_submit" type="object" attrs="{'invisible': ['|', '|', ('state','!=','draft'), ('temp_save','!=',False), ('can_edit', '=', False)]}" string="Submit" class="oe_highlight"/>
@@ -80,13 +79,13 @@
                 <attribute name="invisible">1</attribute>
             </xpath>
             <xpath expr="//field[@name='km_home_work']" position="attributes">
-                <attribute name="attrs">{'required':[('temp_save','=',False)],'readonly':['|', ('state','!=','draft'), ('can_edit','=',False)]}</attribute>
+                <attribute name="attrs">{'readonly':['|', ('state','!=','draft'), ('can_edit','=',False)]}</attribute>
             </xpath>
              <xpath expr="//field[@name='place_of_birth']" position="attributes">
-                <attribute name="attrs">{'required':[('temp_save','=',False)],'readonly':['|', ('state','!=','draft'), ('can_edit','=',False)]}</attribute>
+                <attribute name="attrs">{'readonly':['|', ('state','!=','draft'), ('can_edit','=',False)]}</attribute>
             </xpath>
             <xpath expr="//field[@name='country_of_birth']" position="attributes">
-                <attribute name="attrs">{'required':[('temp_save','=',False)],'readonly':['|', ('state','!=','draft'), ('can_edit','=',False)]}</attribute>
+                <attribute name="attrs">{'readonly':['|', ('state','!=','draft'), ('can_edit','=',False)]}</attribute>
             </xpath>
             <xpath expr="//field[@name='private_email']" position="before">
                 <label for="address_street" string="Address (Post Code / State)"/>
@@ -181,7 +180,7 @@
                     <div>
                         <div>
                             <field name="qualification_ids" attrs="{'readonly':['|', ('state','!=','draft'), ('can_edit','=',False)]}"/>
-                            <div>E.g. Name: CISA, Date Obtained: 2018/03/01, Valid Until: 2019/02/28, Reference: 1234567</div>
+                            <div>e.g. Name: Eiken Grade 1, Date Obtained: 2018/03/01</div>
                         </div>
                     </div>
                 </group>

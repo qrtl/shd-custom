@@ -65,13 +65,13 @@
                 <attribute name="invisible">1</attribute>
             </xpath>
             <xpath expr="//field[@name='km_home_work']" position="attributes">
-                <attribute name="attrs">{'required':[('temp_save','=',False)],'readonly':['|', ('state','!=','draft')]}</attribute>
+                <attribute name="attrs">{'readonly':['|', ('state','!=','draft')]}</attribute>
             </xpath>
             <xpath expr="//field[@name='place_of_birth']" position="attributes">
-                <attribute name="attrs">{'required':[('temp_save','=',False)],'readonly':['|', ('state','!=','draft')]}</attribute>
+                <attribute name="attrs">{'readonly':['|', ('state','!=','draft')]}</attribute>
             </xpath>
             <xpath expr="//field[@name='country_of_birth']" position="attributes">
-                <attribute name="attrs">{'required':[('temp_save','=',False)],'readonly':['|', ('state','!=','draft')]}</attribute>
+                <attribute name="attrs">{'readonly':['|', ('state','!=','draft')]}</attribute>
             </xpath>
             <xpath expr="//field[@name='private_email']" position="before">
                 <label for="address_street" string="Address (Post Code / State)"/>
@@ -166,7 +166,7 @@
                     <div>
                         <div>
                             <field name="qualification_ids" attrs="{'readonly':[('state','!=','draft')]}"/>
-                            <div>E.g. Name: CISA, Date Obtained: 2018/03/01, Valid Until: 2019/02/28, Reference: 1234567</div>
+                            <div>e.g. Name: Eiken Grade 1, Date Obtained: 2018/03/01</div>
                         </div>
                     </div>
                 </group>
