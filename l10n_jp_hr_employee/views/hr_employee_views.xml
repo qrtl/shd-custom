@@ -6,12 +6,6 @@
         <field name="model">hr.employee</field>
         <field name="inherit_id" ref="hr.view_employee_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//header" position="inside">
-                <button name="action_submit" type="object" attrs="{'invisible': ['|',('state','!=','draft'),('temp_save','!=',False)]}" string="Submit" class="oe_highlight"/>
-                <button name="action_confirm" type="object" states="submit" string="Confirm" class="oe_highlight" groups="hr.group_hr_manager"/>
-                <button name="action_draft" type="object" states="submit,confirm" string="Set to Draft"/>
-                <field name="state" widget="statusbar" clickable="0"/>
-            </xpath>
             <xpath expr="//field[@name='mobile_phone']" position="before">
                 <label for="family_name" string="Name"/>
                 <div>
@@ -30,6 +24,14 @@
             </xpath>
             <xpath expr="//field[@name='department_id']" position="before">
                 <field name="employment_type_id" widget="selection"/>
+            </xpath>
+            <xpath expr="//page[@name='personal_information']/group[1]" position="before">
+                <header>
+                    <button name="action_submit" type="object" attrs="{'invisible': ['|',('state','!=','draft'),('temp_save','!=',False)]}" string="Submit" class="oe_highlight"/>
+                    <button name="action_confirm" type="object" states="submit" string="Confirm" class="oe_highlight" groups="hr.group_hr_manager"/>
+                    <button name="action_draft" type="object" states="submit,confirm" string="Set to Draft"/>
+                    <field name="state" widget="statusbar" readonly="1"/>
+                </header>
             </xpath>
             <xpath expr="//page[@name='personal_information']/group/group[3]" position="attributes">
                 <attribute name="invisible">1</attribute>

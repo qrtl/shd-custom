@@ -750,6 +750,9 @@ class HrEmployee(models.Model):
                     'emp_ins_number_3rd')
     def _validate_digit_length(self):
         for rec in self:
+            # replace rec depending on the context, or the logic only looks at
+            # hr.employee record
+            rec = rec.user_id if self.env.context.get("from_my_profile") else rec
             msg = _("%s should be %s digit(s).")
             if rec.postal_code and not len(rec.postal_code) == 7:
                 raise ValidationError(msg % (_("Postal Code"), "7"))
