@@ -750,6 +750,9 @@ class HrEmployee(models.Model):
                     'emp_ins_number_3rd')
     def _validate_digit_length(self):
         for rec in self:
+            # replace rec depending on the context, or the logic only looks at
+            # hr.employee record
+            rec = rec.user_id if self.env.context.get("from_my_profile") else rec
             msg = _("%s should be %s digit(s).")
             if rec.postal_code and not len(rec.postal_code) == 7:
                 raise ValidationError(msg % (_("Postal Code"), "7"))
@@ -783,7 +786,7 @@ class HrEmployee(models.Model):
                     # ref: https://www.w3.org/TR/html5/forms.html#valid-e-mail-address
                     r"^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$",
                     rec.private_email):
-                raise ValidationError(msg % ("Private Email"))
+                raise ValidationError(msg % (_("Private Email")))
 
     def action_draft(self):
         return self.write({'state': 'draft'})
@@ -794,13 +797,15 @@ class HrEmployee(models.Model):
     def action_confirm(self):
         return self.write({'state': 'confirm'})
 
-    @api.model
-    def create(self, vals):
-        res = super(HrEmployee, self).create(vals)
-        users = self.env.ref(
-            'l10n_jp_hr_employee.group_employee_private_info').users
-        if users:
-            res.message_subscribe_users(user_ids=users.ids)
+    def _message_auto_subscribe_followers(self, updated_values, subtype_ids):
+        res = super(HrEmployee, self)._message_auto_subscribe_followers(
+            updated_values, subtype_ids
+        )
+        if updated_values.get("name") or updated_values.get("state"):
+            users = self.env.ref(
+                'l10n_jp_hr_employee.group_employee_private_info').users
+            for user in users:
+                res.append((user.partner_id.id, subtype_ids, False))
         return res
 
     def write(self, vals):

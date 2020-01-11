@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: Odoo Server 13.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-09 08:17+0000\n"
-"PO-Revision-Date: 2020-01-09 08:17+0000\n"
+"POT-Creation-Date: 2020-01-11 14:53+0000\n"
+"PO-Revision-Date: 2020-01-11 14:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -53,6 +53,365 @@ msgstr "%s には %s 桁の数値を入れてください。"
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_qualification_tree
 msgid "'YYYY/MM/DD' or 'YYYY/MM'"
 msgstr "'YYYY/MM/DD' または 'YYYY/MM'"
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+msgid "1020082"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+msgid "12-345678"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+msgid "1234567"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1960
+msgid "1960"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1961
+msgid "1961"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1962
+msgid "1962"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1963
+msgid "1963"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1964
+msgid "1964"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1965
+msgid "1965"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1966
+msgid "1966"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1967
+msgid "1967"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1968
+msgid "1968"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1969
+msgid "1969"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1970
+msgid "1970"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1971
+msgid "1971"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1972
+msgid "1972"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1973
+msgid "1973"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1974
+msgid "1974"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1975
+msgid "1975"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1976
+msgid "1976"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1977
+msgid "1977"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1978
+msgid "1978"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1979
+msgid "1979"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1980
+msgid "1980"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1981
+msgid "1981"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1982
+msgid "1982"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1983
+msgid "1983"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1984
+msgid "1984"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1985
+msgid "1985"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1986
+msgid "1986"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1987
+msgid "1987"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1988
+msgid "1988"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1989
+msgid "1989"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1990
+msgid "1990"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1991
+msgid "1991"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1992
+msgid "1992"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1993
+msgid "1993"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1994
+msgid "1994"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1995
+msgid "1995"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1996
+msgid "1996"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1997
+msgid "1997"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1998
+msgid "1998"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__1999
+msgid "1999"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2000
+msgid "2000"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2001
+msgid "2001"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2002
+msgid "2002"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2003
+msgid "2003"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2004
+msgid "2004"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2005
+msgid "2005"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_hr_dependant_form
+msgid "2005/03/01"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2006
+msgid "2006"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2007
+msgid "2007"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2008
+msgid "2008"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2009
+msgid "2009"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2010
+msgid "2010"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2011
+msgid "2011"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2012
+msgid "2012"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2013
+msgid "2013"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2014
+msgid "2014"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2015
+msgid "2015"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2016
+msgid "2016"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2017
+msgid "2017"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2018
+msgid "2018"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2019
+msgid "2019"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_hr_dependant_form
+msgid "2019/01/01"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__year_left_school__2020
+msgid "2020"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+msgid "2025/01/01"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_hr_dependant_form
+msgid "9999"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_hr_dependant_form
+msgid "999999"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+msgid "A1234567"
+msgstr ""
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__furi_bank_acc_holder
@@ -299,14 +658,6 @@ msgid "Draft"
 msgstr "ドラフト"
 
 #. module: l10n_jp_hr_employee
-#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
-#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
-msgid ""
-"E.g. Name: CISA, Date Obtained: 2018/03/01, Valid Until: 2019/02/28, "
-"Reference: 1234567"
-msgstr "例) 名称: CISA  取得日: 2018/03/01  有効期限: 2019/02/28  参照: 1234567"
-
-#. module: l10n_jp_hr_employee
 #: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_dependant__dependant_categ__08_elder_sibling
 msgid "Elder Sibling"
 msgstr "兄姉"
@@ -535,6 +886,13 @@ msgid "High School Student"
 msgstr "高校生"
 
 #. module: l10n_jp_hr_employee
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_dependant__id
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employment_type__id
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_qualification__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_dependant__inactive
 msgid "Inactive"
 msgstr "扶養から外す"
@@ -571,6 +929,17 @@ msgid ""
 "Input the date of joining the company in case the dependant enters the "
 "dependency due to that reason "
 msgstr "入社に伴い扶養に入る場合は入社日を記入"
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__is_hr_manager
+msgid "Is HR Administrator"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: code:addons/l10n_jp_hr_employee/models/hr_dependant.py:0
+#, python-format
+msgid "JPY"
+msgstr ""
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_dependant__occupation__junior
@@ -814,10 +1183,17 @@ msgid "Prefecture"
 msgstr "都道府県"
 
 #. module: l10n_jp_hr_employee
+#: code:addons/l10n_jp_hr_employee/models/hr_employee.py:0
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__private_email
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_res_users__private_email
+#, python-format
 msgid "Private Email"
 msgstr "個人Eメール"
+
+#. module: l10n_jp_hr_employee
+#: model:ir.module.category,name:l10n_jp_hr_employee.module_category_human_resources_private_info
+msgid "Private Information"
+msgstr "個人情報"
 
 #. module: l10n_jp_hr_employee
 #: code:addons/l10n_jp_hr_employee/models/hr_employee.py:0
@@ -841,6 +1217,11 @@ msgstr "仕送額確認 (?)"
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_dependant__amt_to_family_confirm_doc_filename
 msgid "Proof of Amount Sent to Family File Name"
 msgstr "仕送額確認ファイル名"
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model,name:l10n_jp_hr_employee.model_hr_employee_public
+msgid "Public Employee"
+msgstr ""
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__qualification_ids
@@ -954,6 +1335,11 @@ msgid "Special Widow"
 msgstr "特別寡婦"
 
 #. module: l10n_jp_hr_employee
+#: model:ir.module.category,description:l10n_jp_hr_employee.module_category_human_resources_private_info
+msgid "Groups related to managing private information."
+msgstr "個人情報管理に関連したグループ"
+
+#. module: l10n_jp_hr_employee
 #: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_dependant__dependant_categ__01_spouse
 #: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__emerg_contact_type__spouse
 msgid "Spouse"
@@ -997,6 +1383,12 @@ msgstr "申請"
 #: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__state__submit
 msgid "Submitted"
 msgstr "提出済"
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+msgid "TAROU"
+msgstr ""
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__temp_save
@@ -1063,6 +1455,12 @@ msgid "Unfinished"
 msgstr "中退"
 
 #. module: l10n_jp_hr_employee
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_dependant__user_id
+#: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_qualification__user_id
+msgid "User"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
 #: model:ir.model,name:l10n_jp_hr_employee.model_res_users
 msgid "Users"
 msgstr "ユーザ"
@@ -1093,6 +1491,12 @@ msgid "Working Student Deduction"
 msgstr "勤労学生控除"
 
 #. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+msgid "YAMADA"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_hr_dependant_form
 msgid "Year"
 msgstr "年生"
@@ -1110,6 +1514,127 @@ msgstr "弟妹"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,help:l10n_jp_hr_employee.field_hr_qualification__name
-msgid "e.g. CISA"
-msgstr "例)CISA"
+msgid "e.g. Eiken Grade 1"
+msgstr "例) 英検1級"
 
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+msgid "e.g. Name: Eiken Grade 1, Date Obtained: 2018/03/01"
+msgstr "例) 名称: 英検1級、取得日: 2018/03/01"
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model,name:l10n_jp_hr_employee.model_hr_dependant
+msgid "hr.dependant"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model,name:l10n_jp_hr_employee.model_hr_employment_type
+msgid "hr.employment.type"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:ir.model,name:l10n_jp_hr_employee.model_hr_qualification
+msgid "hr.qualification"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_hr_dependant_form
+msgid "¥5,000,000"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_hr_dependant_form
+msgid "¥50,000"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+msgid "○○大学"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+msgid "○○大学在学中、等あれば"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+msgid "○○学部○○○学科"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_hr_dependant_form
+msgid "チヨダイチバンチョウユウビンキョク"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+msgid "チヨダク イチバンチョウ１０－２２"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+msgid ""
+"・ご自身の情報を入力してください。<br/>\n"
+"                    ・\"被扶養者情報\"ブロックに扶養者を要する場合は入力してください。<br/>\n"
+"                    <br/>\n"
+"                    ・入力後、「保存」→「申請」で担当者に通知が届きます。<br/>\n"
+"                    ・申請後、変更が発生した場合(住所変更等)は左上の「ドラフトに設定」をクリックすると修正可能になります。<br/>\n"
+"                    　修正後再度「保存」→「申請」をクリックしてください。<br/>\n"
+"                    <br/>\n"
+"                    －入力必須項目が多数ありますが、「とりあえず保存」を選択すると入力途中でも保存ができます。<br/>"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+msgid "三井住友銀行"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+msgid "千代田一番町郵便局"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_hr_dependant_form
+msgid "千代田区一番町１０－２２"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_hr_dependant_form
+msgid "山田 太郎"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+msgid "山田　○○"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+msgid "神保町支店"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_hr_dependant_form
+msgid "ﾔﾏﾀﾞ ﾀﾛｳ"
+msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
+msgid "ﾔﾏﾀﾞﾀﾛｳ"
+msgstr ""

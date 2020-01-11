@@ -13,7 +13,7 @@ class HrQualification(models.Model):
 
     name = fields.Char(
         required=True,
-        help='e.g. CISA',
+        help='e.g. Eiken Grade 1',
     )
     employee_id = fields.Many2one(
         'hr.employee',

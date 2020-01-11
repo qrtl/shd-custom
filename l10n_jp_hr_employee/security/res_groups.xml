@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
+    <record model="ir.module.category" id="module_category_human_resources_private_info">
+        <field name="parent_id" ref="base.module_category_human_resources"/>
+        <field name="name">Private Information</field>
+        <field name="description">Groups related to managing private information.</field>
+        <field name="sequence">20</field>
+    </record>
+
     <record model="res.groups" id="group_employee_private_info">
         <field name="name">Employee Private Information Notify</field>
-        <field name="category_id" ref="base.module_category_human_resources"/>
+        <field name="category_id" ref="l10n_jp_hr_employee.module_category_human_resources_private_info"/>
     </record>
 
 </odoo>

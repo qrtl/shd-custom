@@ -5,6 +5,7 @@ import jaconv
 
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
+from . import hr_employee
 
 
 class HrDependant(models.Model):
@@ -182,7 +183,7 @@ class HrDependant(models.Model):
     @api.onchange('phone')
     def _onchange_phone(self):
         if self.phone:
-            self.phone, msg = self.env['hr.employee'].check_digits(
+            self.phone, msg = hr_employee.check_digits(
                 self.phone)
             if not self.phone:
                 return msg
@@ -190,7 +191,7 @@ class HrDependant(models.Model):
     @api.onchange('postal_code')
     def _onchange_postal_code(self):
         if self.postal_code:
-            self.postal_code, msg = self.env['hr.employee'].check_digits(
+            self.postal_code, msg = hr_employee.check_digits(
                 self.postal_code)
             if not self.postal_code:
                 return msg
@@ -204,7 +205,7 @@ class HrDependant(models.Model):
     @api.onchange('pension_code')
     def _onchange_pension_code(self):
         if self.pension_code:
-            self.pension_code, msg = self.env['hr.employee'].check_digits(
+            self.pension_code, msg = hr_employee.check_digits(
                 self.pension_code)
             if not self.pension_code:
                 return msg
@@ -212,7 +213,7 @@ class HrDependant(models.Model):
     @api.onchange('pension_seq')
     def _onchange_pension_seq(self):
         if self.pension_seq:
-            self.pension_seq, msg = self.env['hr.employee'].check_digits(
+            self.pension_seq, msg = hr_employee.check_digits(
                 self.pension_seq)
             if not self.pension_seq:
                 return msg
