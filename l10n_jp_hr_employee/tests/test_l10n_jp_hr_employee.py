@@ -18,7 +18,7 @@ class L10nJpHrEmployee(common.TransactionCase):
         self.env['ir.config_parameter'].sudo().set_param(
             'hr.hr_employee_self_edit', False)
         with self.assertRaises(AccessError):
-            self.test_user.with_user(self.test_user.id).write({
+            self.test_user.with_user(self.test_employee.id).write({
                 'private_phone': '1133334444',
                 'private_email': 'test@odoo.com',
                 'roman_family_name': 'YAMADA',
