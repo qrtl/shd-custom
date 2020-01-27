@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-11 14:53+0000\n"
-"PO-Revision-Date: 2020-01-11 14:53+0000\n"
+"POT-Creation-Date: 2020-01-27 08:52+0000\n"
+"PO-Revision-Date: 2020-01-27 08:52+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -432,7 +432,7 @@ msgstr "口座番号"
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Address (Post Code / State)"
-msgstr "住所　郵便番号/都道府県"
+msgstr "住所(郵便番号/都道府県)"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_dependant__furi_address
@@ -508,6 +508,11 @@ msgid "Birthday"
 msgstr "生年月日"
 
 #. module: l10n_jp_hr_employee
+#: model:hr.employment.type,name:l10n_jp_hr_employee.casual
+msgid "Casual"
+msgstr "臨時"
+
+#. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_dependant__cause_dependant_enter_note
 msgid "Cause Note"
 msgstr "理由メモ"
@@ -547,6 +552,11 @@ msgstr "確認"
 #: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__state__confirm
 msgid "Confirmed"
 msgstr "確認済"
+
+#. module: l10n_jp_hr_employee
+#: model:hr.employment.type,name:l10n_jp_hr_employee.contract
+msgid "Contract"
+msgstr "契約"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__country_code
@@ -881,6 +891,11 @@ msgid "Great Grand Parent"
 msgstr "祖祖父母"
 
 #. module: l10n_jp_hr_employee
+#: model:ir.module.category,description:l10n_jp_hr_employee.module_category_human_resources_private_info
+msgid "Groups related to managing private information."
+msgstr "個人情報管理に関連したグループ"
+
+#. module: l10n_jp_hr_employee
 #: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_dependant__occupation__high_school
 msgid "High School Student"
 msgstr "高校生"
@@ -1089,6 +1104,11 @@ msgid "Part Time Worker"
 msgstr "パート"
 
 #. module: l10n_jp_hr_employee
+#: model:hr.employment.type,name:l10n_jp_hr_employee.parttime
+msgid "Part-time"
+msgstr "パートタイム"
+
+#. module: l10n_jp_hr_employee
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Pension Info"
@@ -1129,6 +1149,11 @@ msgstr "基礎年金番号(連番)"
 #: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_dependant__occupation__pensioner
 msgid "Pensioner"
 msgstr "年金受給者"
+
+#. module: l10n_jp_hr_employee
+#: model:hr.employment.type,name:l10n_jp_hr_employee.permanent
+msgid "Permanent"
+msgstr "正社員"
 
 #. module: l10n_jp_hr_employee
 #: code:addons/l10n_jp_hr_employee/models/hr_dependant.py:0
@@ -1293,7 +1318,7 @@ msgstr "住所"
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "Roman Spelling"
-msgstr "名前ローマ字　姓/名"
+msgstr "名前ローマ字(姓/名)"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_employee__bank_acc_type__savings
@@ -1333,11 +1358,6 @@ msgstr "特別"
 #: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_dependant__widowhood__special
 msgid "Special Widow"
 msgstr "特別寡婦"
-
-#. module: l10n_jp_hr_employee
-#: model:ir.module.category,description:l10n_jp_hr_employee.module_category_human_resources_private_info
-msgid "Groups related to managing private information."
-msgstr "個人情報管理に関連したグループ"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields.selection,name:l10n_jp_hr_employee.selection__hr_dependant__dependant_categ__01_spouse
@@ -1389,6 +1409,11 @@ msgstr "提出済"
 #: model_terms:ir.ui.view,arch_db:l10n_jp_hr_employee.view_employee_form
 msgid "TAROU"
 msgstr ""
+
+#. module: l10n_jp_hr_employee
+#: model:hr.employment.type,name:l10n_jp_hr_employee.temp
+msgid "Temporary"
+msgstr "派遣"
 
 #. module: l10n_jp_hr_employee
 #: model:ir.model.fields,field_description:l10n_jp_hr_employee.field_hr_employee__temp_save

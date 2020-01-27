@@ -1,7 +1,8 @@
-# Copyright 2019 Quartile Limited
+# Copyright 2019-2020 Quartile Limited
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo.tests import common
+from odoo.exceptions import AccessError
 
 
 class L10nJpHrEmployee(common.TransactionCase):
@@ -13,7 +14,28 @@ class L10nJpHrEmployee(common.TransactionCase):
         # Employee record that linked to Demo user
         self.test_employee = self.env.ref('hr.employee_qdp')
 
-    def test_00_create_dependant_information(self):
+    def test_00_update_own_private_info_without_self_edit(self):
+        self.env['ir.config_parameter'].sudo().set_param(
+            'hr.hr_employee_self_edit', False)
+        with self.assertRaises(AccessError):
+            self.test_user.with_user(self.test_employee.id).write({
+                'private_phone': '1133334444',
+                'private_email': 'test@odoo.com',
+                'roman_family_name': 'YAMADA',
+                'roman_given_name': 'TAROU',
+            })
+
+    def test_01_update_own_private_info_with_self_edit(self):
+        self.env['ir.config_parameter'].sudo().set_param(
+            'hr.hr_employee_self_edit', True)
+        self.test_user.with_user(self.test_user.id).write({
+            'private_phone': '1133334444',
+            'private_email': 'test@odoo.com',
+            'roman_family_name': 'YAMADA',
+            'roman_given_name': 'TAROU',
+        })
+
+    def test_02_create_dependant_information(self):
         self.env['hr.dependant'].with_user(self.test_user.id).create({
             'employee_id': self.test_employee.id,
             'dependant_categ': '01_spouse',
@@ -25,7 +47,7 @@ class L10nJpHrEmployee(common.TransactionCase):
             'name': '山田 太郎',
         })
 
-    def test_01_create_hr_qualification(self):
+    def test_03_create_hr_qualification(self):
         self.env['hr.qualification'].with_user(self.test_user.id).create({
             'employee_id': self.test_employee.id,
             'name': 'CISA',

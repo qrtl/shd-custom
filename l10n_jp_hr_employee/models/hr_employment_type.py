@@ -9,4 +9,5 @@ class HrEmploymentType(models.Model):
 
     name = fields.Char(
         required=True,
+        translate=True,
     )
