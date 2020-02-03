@@ -15,10 +15,12 @@ class L10nJpHrEmployee(common.TransactionCase):
         self.test_employee = self.env.ref('hr.employee_qdp')
 
     def test_00_update_own_private_info_without_self_edit(self):
+         # User should not be able to update SELF_READABLE_FIELDS when
+         # hr_employee_self_edit is not True
         self.env['ir.config_parameter'].sudo().set_param(
             'hr.hr_employee_self_edit', False)
         with self.assertRaises(AccessError):
-            self.test_user.with_user(self.test_employee.id).write({
+            self.test_user.with_user(self.test_user).write({
                 'private_phone': '1133334444',
                 'private_email': 'test@odoo.com',
                 'roman_family_name': 'YAMADA',
@@ -26,9 +28,11 @@ class L10nJpHrEmployee(common.TransactionCase):
             })
 
     def test_01_update_own_private_info_with_self_edit(self):
+         # User should be able to update SELF_READABLE_FIELDS when
+         # hr_employee_self_edit is True
         self.env['ir.config_parameter'].sudo().set_param(
             'hr.hr_employee_self_edit', True)
-        self.test_user.with_user(self.test_user.id).write({
+        self.test_user.with_user(self.test_user).write({
             'private_phone': '1133334444',
             'private_email': 'test@odoo.com',
             'roman_family_name': 'YAMADA',
@@ -36,7 +40,7 @@ class L10nJpHrEmployee(common.TransactionCase):
         })
 
     def test_02_create_dependant_information(self):
-        self.env['hr.dependant'].with_user(self.test_user.id).create({
+        self.env['hr.dependant'].with_user(self.test_user).create({
             'employee_id': self.test_employee.id,
             'dependant_categ': '01_spouse',
             'gender': 'male',
@@ -48,7 +52,7 @@ class L10nJpHrEmployee(common.TransactionCase):
         })
 
     def test_03_create_hr_qualification(self):
-        self.env['hr.qualification'].with_user(self.test_user.id).create({
+        self.env['hr.qualification'].with_user(self.test_user).create({
             'employee_id': self.test_employee.id,
             'name': 'CISA',
             'date_obtained': '2000-01-01',
