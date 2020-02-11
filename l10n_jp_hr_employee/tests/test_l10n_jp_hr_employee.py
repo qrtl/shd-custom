@@ -9,14 +9,20 @@ class L10nJpHrEmployee(common.TransactionCase):
 
     def setUp(self):
         super(L10nJpHrEmployee, self).setUp()
-        # Demo user
-        self.test_user = self.env.ref('base.user_demo')
-        # Employee record that linked to Demo user
-        self.test_employee = self.env.ref('hr.employee_qdp')
+        # Prepare a user who has no privilege of group_hr_user
+        self.test_user = self.env['res.users'].create({
+            'login': "test_user",
+            'name': "Test User",
+            'groups_id': [(6, 0, [self.env.ref('base.group_user').id])],
+        })
+        self.test_employee = self.env['hr.employee'].create({
+            'name': 'Test Employee',
+            'user_id': self.test_user.id,
+        })
 
     def test_00_update_own_private_info_without_self_edit(self):
-         # User should not be able to update SELF_READABLE_FIELDS when
-         # hr_employee_self_edit is not True
+        # User should not be able to update SELF_READABLE_FIELDS when
+        # hr_employee_self_edit is not True
         self.env['ir.config_parameter'].sudo().set_param(
             'hr.hr_employee_self_edit', False)
         with self.assertRaises(AccessError):
