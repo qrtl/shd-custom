@@ -1,4 +1,3 @@
-
 exclude: |
   (?x)
   # NOT INSTALLABLE ADDONS
@@ -34,7 +33,7 @@ repos:
       # update the NOT INSTALLABLE ADDONS section above
       - id: oca-update-pre-commit-excluded-addons
       - id: oca-fix-manifest-website
-        args: ["https://github.com/OCA/shd-custom"]
+        args: ["https://quartile.co"]
   - repo: https://github.com/myint/autoflake
     rev: v1.4
     hooks:
@@ -98,16 +97,16 @@ repos:
         args:
           - --settings=.
         exclude: /__init__\.py$
-  - repo: https://github.com/acsone/setuptools-odoo
-    rev: 2.6.0
-    hooks:
-      - id: setuptools-odoo-make-default
-      - id: setuptools-odoo-get-requirements
-        args:
-          - --output
-          - requirements.txt
-          - --header
-          - "# generated from manifests external_dependencies"
+  # - repo: https://github.com/acsone/setuptools-odoo
+  #   rev: 2.6.0
+  #   hooks:
+  #     - id: setuptools-odoo-make-default
+  #     - id: setuptools-odoo-get-requirements
+  #       args:
+  #         - --output
+  #         - requirements.txt
+  #         - --header
+  #         - "# generated from manifests external_dependencies"
   - repo: https://gitlab.com/PyCQA/flake8
     rev: 3.8.3
     hooks:
