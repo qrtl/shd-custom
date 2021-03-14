@@ -4,7 +4,7 @@
     "name": "Website Slides View Adjustments",
     "version": "14.0.1.0.0",
     "category": "Website",
-    "website": "https://www.quartile.co/",
+    "website": "https://quartile.co",
     "author": "Quartile Limited",
     "license": "LGPL-3",
     "installable": True,
