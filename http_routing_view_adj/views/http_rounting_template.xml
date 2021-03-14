@@ -2,7 +2,12 @@
 <odoo>
     <template id="403" inherit_id="http_routing.403">
         <xpath expr="//div[@class='container'][1]" position="inside">
-            <p class="alert alert-warning" style="font-size: 20px;">Have an account already? <span class="fa fa-arrow-right"/> <a t-attf-href="/web/login">Sign in</a></p>
+            <p
+                class="alert alert-warning"
+                style="font-size: 20px;"
+            >Have an account already? <span class="fa fa-arrow-right" /> <a
+                    t-attf-href="/web/login"
+                >Sign in</a></p>
         </xpath>
     </template>
 </odoo>
