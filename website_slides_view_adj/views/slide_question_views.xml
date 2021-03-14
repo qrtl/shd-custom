@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="slide_question_view_form" model="ir.ui.view">
+        <field name="name">slide.question.view.form</field>
+        <field name="model">slide.question</field>
+        <field name="inherit_id" ref="website_slides.slide_question_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='text_value']" position="before">
+                <field name="sequence" widget="handle" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
