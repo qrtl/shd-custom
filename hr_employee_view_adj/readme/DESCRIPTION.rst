@@ -1,1 +1,1 @@
-This module adjusts HR employee functions.
+This module adjusts HR employee views.
