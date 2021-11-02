@@ -9,7 +9,7 @@
                 expr="//div[hasclass('oe_kanban_details')]//field[@name='name']"
                 position="before"
             >
-                <field name="pin" />
+                <field name="barcode" />
             </xpath>
         </field>
     </record>
@@ -19,7 +19,7 @@
         <field name="inherit_id" ref="hr.view_employee_tree" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='name']" position="after">
-                <field name="pin" />
+                <field name="barcode" />
             </xpath>
         </field>
     </record>
@@ -29,7 +29,7 @@
         <field name="inherit_id" ref="hr.view_employee_filter" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='name']" position="after">
-                <field name="pin" />
+                <field name="barcode" />
             </xpath>
         </field>
     </record>
