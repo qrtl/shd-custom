@@ -7,5 +7,6 @@ from odoo import fields, models
 class HrEmployee(models.Model):
     _inherit = "hr.employee"
 
-    parent_department = fields.char
+    parent_department = fields.Many2one('hr.department')
 
+    @api.depend('hr.department')
