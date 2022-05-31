@@ -9,4 +9,4 @@ class HrEmployee(models.Model):
 
     parent_department = fields.Many2one('hr.department')
 
-    @api.depend('hr.department')
+    # @api.depend('hr.department')
