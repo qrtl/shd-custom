@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="hr.view_employee_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='department_id']" position="after">
-                <field name="parent_department" />
+                <field name="top_dept_id" />
             </xpath>
         </field>
     </record>

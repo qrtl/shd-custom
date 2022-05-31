@@ -9,5 +9,5 @@
     "license": "LGPL-3",
     "installable": True,
     "depends": ["hr"],
-    "data": ["views/hr_employee_views.xml"],
+    "data": ['views/hr_employee_views.xml'],
 }
