@@ -8,13 +8,13 @@ class HrEmployee(models.Model):
     _inherit = ["hr.employee"]
 
     top_dept_id = fields.Many2one(
-        'hr.department',
+        "hr.department",
         string="Top Department",
-        compute='_compute_top_department',
+        compute="_compute_top_department",
         help="Company",
-        )
+    )
 
-    @api.depends('department_id')
+    @api.depends("department_id")
     def _compute_top_department(self):
         for employee in self:
             employee.top_dept_id = False  # たしか14.0だとFalseの場合でも明示的に指定が必要なのではじめにこの行を設けておく
