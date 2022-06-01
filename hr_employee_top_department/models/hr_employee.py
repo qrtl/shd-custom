@@ -9,13 +9,13 @@ class HrEmployee(models.Model):
 
     top_dept_id = fields.Many2one(
         'hr.department',
-        string="Top Dept",
-        compute='_compute_parent_department',
+        string="Top Department",
+        compute='_compute_top_department',
         help="Company",
         )
 
     @api.depends('department_id')
-    def _compute_parent_department(self):
+    def _compute_top_department(self):
         for employee in self:
             employee.top_dept_id = False  # たしか14.0だとFalseの場合でも明示的に指定が必要なのではじめにこの行を設けておく
             top_dept = employee.department_id
