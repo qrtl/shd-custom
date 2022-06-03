@@ -1,0 +1,46 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_employee_top_department
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-01 09:47+0000\n"
+"PO-Revision-Date: 2022-06-01 09:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_employee_top_department
+#: model:ir.model.fields,help:hr_employee_top_department.field_hr_employee__top_dept_id
+msgid "Company"
+msgstr "会社"
+
+#. module: hr_employee_top_department
+#: model:ir.model.fields,field_description:hr_employee_top_department.field_hr_employee__display_name
+msgid "Display Name"
+msgstr "表示名"
+
+#. module: hr_employee_top_department
+#: model:ir.model,name:hr_employee_top_department.model_hr_employee
+msgid "Employee"
+msgstr "従業員"
+
+#. module: hr_employee_top_department
+#: model:ir.model.fields,field_description:hr_employee_top_department.field_hr_employee__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_employee_top_department
+#: model:ir.model.fields,field_description:hr_employee_top_department.field_hr_employee____last_update
+msgid "Last Modified on"
+msgstr "最終更新日"
+
+#. module: hr_employee_top_department
+#: model:ir.model.fields,field_description:hr_employee_top_department.field_hr_employee__top_dept_id
+msgid "Top Department"
+msgstr "部門トップ(会社)"
